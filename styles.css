@@ -1,0 +1,310 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #121725;
+    min-height: 100vh;
+    height: auto;
+    font-family: 'Chivo', sans-serif;
+    overflow-x: hidden;
+    width: 100%
+}
+
+.host {
+    max-width: 491px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.7993);   
+    background-clip: content-box;
+    z-index: 1;
+}
+
+.pod-logo{
+    margin: 62px 120px 57px;
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    width: 100%;
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+
+  h1{
+    width: 327px;
+    margin-top: 175px;
+    color: #54E6AF;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 38px; 
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+h1 span{
+    color: #FFF;
+    font-family: Chivo;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+p{
+    color: #C2CBE5;
+    text-align: center;
+    font-family: Chivo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    width: 327px;
+    margin: 16px 24px 33px;
+}
+
+
+.fourLogos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    margin: 0 30px 48px;
+    gap: 23px;
+  }
+  
+  .fourLogos img:nth-child(1) {
+    width: 56px;
+    height: 17px;
+  }
+  
+  .fourLogos img:nth-child(2) {
+    width: 45px;
+    height: 17px;
+  }
+  
+  .fourLogos img:nth-child(3) {
+    width: 73px;
+    height: 11px;
+  }
+  
+  .fourLogos img:nth-child(4) {
+    width: 77px;
+    height: 15px;
+  }
+
+  .formEm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+#email{
+    width: 327px;
+    height: 46px;
+    border-radius: 28px;
+    background: #2C344B;
+    border: none;
+}
+
+.email-input{
+    color: #FFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    /* opacity: 0.5; */
+    padding-left: 32px;
+}
+  .submit-button{
+    width: 326px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    background: #54E6AF;
+    box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.50);
+    color: #121725;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    border: none;
+  }
+
+  .dot-grid{
+    display: none;
+  }
+
+
+@media (min-width: 768px) {
+    .layer{
+        display: none;
+    }
+
+    .pod-logo{
+        margin-top: 50px;
+        margin-left: 39px;
+    }
+
+    .content {
+        background-color: #121725;
+        margin-top: 258px;
+        align-items: baseline;
+        width: 635px;
+        height: 509px;
+      }
+
+    h1{
+        margin-top: 93px;
+        width: 635px;
+        font-size: 48px;
+        line-height: 56px;
+        margin-left: 39px;
+        text-align: left;
+    }
+
+    h1 span{
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+        margin-left: 39px;
+        width: 445px;
+    }
+    .formEm {
+        order: 1;
+        margin-top: 40px;
+      }
+    
+      .fourLogos {
+        order: 2;
+        margin-top: 64px;
+        margin: 64px 30px 48px;
+        gap: 40px;
+      }
+      
+      .fourLogos img:nth-child(1) {
+        width: 96px;
+        height: 29px;
+      }
+      
+      .fourLogos img:nth-child(2) {
+        width: 78px;
+        height: 29px;
+      }
+      
+      .fourLogos img:nth-child(3) {
+        width: 125px;
+        height: 18px;
+      }
+      
+      .fourLogos img:nth-child(4) {
+        width: 129px;
+        height: 26px;
+      }
+
+      #email{
+        width: 427px;
+        height: 56px;
+    }
+
+    .submit-button{
+        width: 162px;
+        height: 46px;
+        margin-top: -67px;
+        margin-left: 250px;
+      }
+
+      .dot-grid {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 30px;
+    }
+
+}
+
+
+@media (min-width: 1440px) {
+body{
+    height: auto;
+}
+
+.host{
+    width: 888px;
+    height: 640px;
+}
+
+    .pod-logo{
+        margin-top: 102px;
+        margin-left: 165px;
+    }
+
+    .content {
+        background-color: #121725;
+        margin-top: 258px;
+        align-items: baseline;
+        width: 888px;
+        height: 529px;
+      }
+
+    h1{
+        margin-top: 88px;
+        width: 665px;
+        font-size: 52px;
+        line-height: 62px;
+        margin-left: 165px;
+    }
+
+    h1 span{
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+      .dot-grid {
+        position: fixed;
+        bottom: 78px;
+        left: 1340px;
+    }
+
+    .host{
+        display: none;
+    }
+
+    .forImage{
+        background-image: url(./assets/desktop/image-host.jpg);
+        width: 888px;
+        height: 640px;
+        position: fixed;
+        top: 130px;
+        right: 0px;
+    }
+}
