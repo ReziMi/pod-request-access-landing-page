@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM content loaded");
-  const form = document.querySelector('.access-form');
-  const emailInput = document.getElementById('input-field');
-  const alertOutput = document.getElementById('alert-output');
+const form = document.querySelector('.access-form');
+const emailInput = document.getElementById('input-field');
+const alertOutput = document.getElementById('alert-output');
+const submitButton = document.querySelector('button'); 
 
-  form.addEventListener('submit', function (event) {
-      event.preventDefault(); // prevent the default form submission
+submitButton.addEventListener('click', function (event) {
+    event.preventDefault();
 
-      const emailValue = emailInput.value.trim();
+    const emailValue = emailInput.value.trim();
 
-      // Regular expression for validating an Email
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Regular expression for validating an Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (emailValue === '' || !emailRegex.test(emailValue)) {
-          alertOutput.style.display = 'block';
-      } else {
-          alertOutput.style.display = 'none';
-      }
+    if (emailValue === '' || !emailRegex.test(emailValue)) {
+        alertOutput.style.display = 'block';
+        console.log('working');
+    } else {
+        alertOutput.style.display = 'none';
+        console.log("dfdsfds");
+    }
 
-      return false;
-  });
+    return false;
 });
